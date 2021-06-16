@@ -14,10 +14,8 @@ function getJoke(type) {
     var data = JSON.parse(this.response);
 
     if (request.status >= 200 && request.status < 400) {
-      data.forEach((joke) => {
-        // Log each movie's title
-        return joke.punchline;
-      });
+      return (document.getElementById("punchline").innerText =
+        data.setup + "\n" + data.punchline);
     } else {
       console.log("error");
     }

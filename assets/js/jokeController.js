@@ -1,9 +1,16 @@
 const choice = document.getElementById("type");
+const newButton = document.getElementById("new-joke-button");
 const punchlineField = document.getElementById("punchline");
 
 choice.addEventListener("change", () => {
-  const type = choice.value;
-  const punchline = getJoke(type);
-
-  punchlineField.innerText = punchline;
+  newJoke();
 });
+
+newButton.addEventListener("click", () => {
+  newJoke();
+});
+
+async function newJoke() {
+  const type = "random";
+  const punchline = await getJoke(type);
+}
