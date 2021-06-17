@@ -14,6 +14,7 @@ function getJoke(type) {
     var data = JSON.parse(this.response);
 
     if (request.status >= 200 && request.status < 400) {
+      document.getElementById("joke-type").innerText = data.type;
       return (document.getElementById("punchline").innerText =
         data.setup + "\n" + data.punchline);
     } else {

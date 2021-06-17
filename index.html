@@ -1,16 +1,23 @@
 <html>
   <head>
     <title></title>
-    <link rel="stylesheet" href="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div id="Joke">
-      <select id="type" name="genre">
-        <option value="jokes">Random</option>
-        <option value="programming">Programming</option>
-      </select>
-      <button id="new-joke-button">new</button>
+    <div id="joke">
+      <h1 id="joke-type"></h1>
       <p id="punchline"></p>
+      <div id="user-items">
+        <select id="type" name="genre">
+          <option value="jokes">Random</option>
+          <option value="programming">Programming</option>
+        </select>
+        <button id="new-joke-button">new</button>
+      </div>
     </div>
   </body>
   <script src="assets/js/app.js"></script>
